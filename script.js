@@ -2,7 +2,7 @@
 function chatbot(input) {
   let output = "";
   input = input.toLowerCase();
-  if (input.includes("hello") || input.includes("hi")) {
+  if (input.includes("hello") || input.includes("hi") || input.includes("hey")) {
     output = "Hello, nice to meet you!";
   } else if (input.includes("how are you")) {
     output = "I'm doing fine, thank you for asking.";
@@ -13,8 +13,12 @@ function chatbot(input) {
   } else if (input.includes("tell me a joke")) {
     output =
       "Why do programmers prefer dark mode?\nBecause the light attracts bugs! 😄";
+  } else if (input.includes("thank")) {
+    output = "You're welcome! 😊";
+  } else if (input.includes("bye") || input.includes("goodbye") || input.includes("see you")) {
+    output = "Goodbye! Have a great day! 👋";
   } else {
-    output = "Sorry, I don't understand that. Please try something else.";
+    output = "Hmm... I didn't quite get that. Try asking me something else! 🤖";
   }
   return output;
 }
